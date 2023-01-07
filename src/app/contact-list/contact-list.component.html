@@ -1,0 +1,29 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-6">
+    <div *ngFor="let contact of contacts"
+         [class.bg-primary]="contact === selectedContact"
+          class="rounded">
+      <Contact [contact]="contact" (click)="setSelectedContact(contact)"></Contact>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12">
+        <ContactAddForm></ContactAddForm>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-12">
+        <ContactDetail [contact]="selectedContact"></ContactDetail>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<ng-template #elseBlock>
+  <div class="row d-flex justify-content-center">
+    <div *ngFor="let contact of contacts">
+      <Contact [contact]="contact" (click)="setSelectedContact(contact)"></Contact>
+    </div>
+  </div>
+</ng-template>-->

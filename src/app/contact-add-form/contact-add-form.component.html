@@ -1,0 +1,23 @@
+<div class="col-12">
+  <div class="card m-3">
+    <div class="card-header">
+      <div><b>Given name: </b><input [(ngModel)]="contactToAdd.givenName"
+                                     placeholder="Given name"
+                                     class="form-control"></div>
+      <div><b>Family name: </b><input [(ngModel)]="contactToAdd.familyName"
+                                      placeholder="Family name"
+                                      class="form-control"></div>
+    </div>
+    <div class="card-body">
+      <div><b>Email: </b><input [(ngModel)]="contactToAdd.email"
+                                placeholder="Family name"
+                                class="form-control"></div>
+      <div><b>Phone number: </b><input [(ngModel)]="contactToAdd.phoneNumber"
+                                       placeholder="Family name"
+                                       class="form-control"></div>
+    </div>
+    <button (click)="addContact()"
+            class="btn btn-success">Add contact
+    </button>
+  </div>
+</div>
